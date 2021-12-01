@@ -1,11 +1,15 @@
 file = open("input.txt")
-e_alt = 0
-c = -1
+sum_alt = 0
+c = 0
+a = [0,0,0]
 
 for e in file:
-    if int(e) > e_alt:
+    del a[0]
+    a.append(e)
+    sum = int(a[0]) + int(a[1]) + int(a[2])
+    if sum > sum_alt:
         c += 1
-    e_alt = int(e)
+    sum_alt = sum
 
 
-print(c)
+print(c-3)
